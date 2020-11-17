@@ -14,11 +14,12 @@
 
 ## recipes テーブル
 
-| Column      | Type   | Options     |
-| ----------- | ------ | ----------- |
-| cuisine     | string | null: false |
-| description | text   |             |
-| foodstuff   | string | null: false |
+| Column      | Type       | Options           |
+| ----------- | ---------- | ----------------- |
+| cuisine     | string     | null: false       |
+| description | text       |                   |
+| foodstuff   | string     | null: false       |
+| user        | references | foreign_key: true |
 
 ### Association
 
