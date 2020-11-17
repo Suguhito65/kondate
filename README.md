@@ -10,8 +10,7 @@
 
 ### Association
 
-- has_many :recipe_users
-- has_many :recipes, through: :recipe_users
+- has_many :recipes
 
 ## recipes テーブル
 
@@ -23,17 +22,4 @@
 
 ### Association
 
-- has_many :recipe_users
-- has_many :users, through: :recipe_users
-
-## recipe_users テーブル
-
-| Column | Type       | Options           |
-| ------ | ---------- | ----------------- |
-| user   | references | foreign_key: true |
-| recipe | references | foreign_key: true |
-
-### Association
-
 - belongs_to :user
-- belongs_to :recipe
