@@ -14,12 +14,19 @@
       <div class="inner">
         <div class="nav">
           <%= link_to "自分の献立", root_path, class: :logo %>
+
+          <% if user_signed_in? %>
             <div class="nav_right">
-              <%= link_to "ログアウト", root_path, class: :nav_btn %>
+              <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :nav_btn %>
               <%= link_to "＋レシピ", root_path, class: :nav_btn %>
-              <%= link_to "ログイン", root_path, class: :nav_btn %>
-              <%= link_to "新規登録", root_path, class: :nav_btn %>
             </div>
+          <% else %>
+            <div class="nav_right">
+              <%= link_to "ログイン", new_user_session_path, class: :nav_btn %>
+              <%= link_to "新規登録",  new_user_registration_path, class: :nav_btn %>
+            </div>
+          <% end %>
+          
         </div>
       </div>
     </header>

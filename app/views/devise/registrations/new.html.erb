@@ -1,0 +1,38 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h1 class="page-heading">ユーザー新規登録</h1>
+
+      <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+
+        <%= render 'devise/shared/error_messages', model: f.object %>
+
+        <div class="field">
+          <%= f.label :name, "ユーザー名" %><br />
+          <%= f.text_area :name, placeholder: "ユーザー名" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :email, "メールアドレス" %><br />
+          <%= f.email_field :email, placeholder:"PC・携帯どちらでも可", autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password, "パスワード（6文字以上の半角英語）" %><br />
+          <%= f.password_field :password, placeholder:"6文字以上の半角英語", autocomplete: "new-password" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation, "パスワード再入力" %><br />
+          <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力して下さい", autocomplete: "new-password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "新規登録", class: :form__btn  %>
+        </div>
+
+      <% end %>
+      
+    </div>
+  </div>
+</div>
