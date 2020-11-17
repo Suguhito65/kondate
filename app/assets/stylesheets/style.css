@@ -59,3 +59,22 @@ li {
   color: #fff;
   background: #f1b307;
 }
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+/* スマホ表示 */
+@media (max-width: 599px) {
+  .logo {
+    font-size: 15px;
+  }
+}
