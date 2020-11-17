@@ -60,6 +60,31 @@ li {
   background: #f1b307;
 }
 
+/* フォーム周り */
+.form__wrapper{
+  min-height: calc(100vh - 161px);
+  padding-top: 80px;
+}
+
+/* エラー */
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  font-size: 1.3vw;
+  color: rgb(19, 9, 204);
+}
+
+.login-flash-message {
+  font-size: 1.3vw;
+  list-style: disc;
+  color: rgb(19, 9, 204);
+}
+
+
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .inner {
