@@ -3,8 +3,13 @@
   本日の献立は？
   </h1>
 </div>
-<div class='recipe-list'>
-  <h2 class="recipe-title">
-  レシピ一覧
-  </h2>
+<div class='recipe-content'>
+  <h2 class="recipe-title">レシピ一覧</h2>
+  <div class='item-img-content'>
+    <% @recipes.each do |recipe| %>
+      <%= image_tag recipe.image, class: "recipe-img" %>
+      <%= recipe.cuisine %>
+      <%= recipe.user.name %>
+    <% end %>
+  </div>
 </div>
