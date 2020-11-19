@@ -18,7 +18,7 @@
           <% if user_signed_in? %>
             <div class="nav_right">
               <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :nav_btn %>
-              <%= link_to "＋レシピ", root_path, class: :nav_btn %>
+              <%= link_to "＋レシピ", new_recipe_path, class: :nav_btn %>
             </div>
           <% else %>
             <div class="nav_right">
