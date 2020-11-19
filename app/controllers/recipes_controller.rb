@@ -3,6 +3,9 @@ class RecipesController < ApplicationController
     @recipes = Recipe.includes(:user)
   end
 
+  def show
+  end
+
   def new
     @recipe = Recipe.new
   end
