@@ -6,19 +6,26 @@
     <div class='recipe-img-content'>
       <%= image_tag @recipe.image, class: "recipe-box-img" %>
     </div>
+
+    <% if user_signed_in? %>
+      <%= link_to 'レシピの編集', edit_recipe_path, class: "edit-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除', root_path, class:'recipe-destroy' %>
+    <% end %>
+
     <div class="recipe__body">
-        <div class="recipe__detail">
-          <p class="detail__title">レシピ説明</p>
-          <p class="detail__message">
-            <%= @recipe.description %>
-          </p>
-        </div>
-        <div class="recipe__detail">
-          <p class="detail__title">食材</p>
-          <p class="detail__message">
-            <%= @recipe.foodstuff %>
-          </p>
-        </div>
+      <div class="recipe__detail">
+        <p class="detail__title">レシピ説明</p>
+        <p class="detail__message">
+          <%= @recipe.description %>
+        </p>
       </div>
+      <div class="recipe__detail">
+        <p class="detail__title">食材</p>
+        <p class="detail__message">
+          <%= @recipe.foodstuff %>
+        </p>
+      </div>
+    </div>
   </div>
 </main>
