@@ -30,6 +30,30 @@
   object-fit: contain;
 }
 
+.edit-btn {
+  text-align: center;
+  background-color: #fc463d;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.or-text {
+  font-size: 20px;
+}
+
+.recipe-destroy {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+
 .recipe__detail{
   display: flex;
   align-items: center;
