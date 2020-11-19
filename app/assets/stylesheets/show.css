@@ -1,0 +1,25 @@
+.recipe__hedding {
+  padding-top: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.recipe-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+}
+
+.recipe__detail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+}
