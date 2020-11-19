@@ -5,11 +5,13 @@
 </div>
 <div class='recipe-content'>
   <h2 class="recipe-title">レシピ一覧</h2>
-  <div class='item-img-content'>
+  <div class='recipe-img-content'>
     <% @recipes.each do |recipe| %>
-      <%= image_tag recipe.image, class: "recipe-img" %>
-      <%= recipe.cuisine %>
-      <%= recipe.user.name %>
+      <%= link_to recipe_path(recipe.id) do %>
+        <%= image_tag recipe.image, class: "recipe-img" %>
+        <%= recipe.cuisine %>
+        <%= recipe.user.name %>
+      <% end %>
     <% end %>
   </div>
 </div>

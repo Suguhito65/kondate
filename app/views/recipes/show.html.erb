@@ -1,0 +1,24 @@
+<main class="recipe-show">
+  <div class="recipe-box">
+    <p class="cuisine">
+      <%= @recipe.cuisine %>
+    </p>
+    <div class='recipe-img-content'>
+      <%= image_tag @recipe.image, class: "recipe-box-img" %>
+    </div>
+    <div class="recipe__body">
+        <div class="recipe__detail">
+          <p class="detail__title">レシピ説明</p>
+          <p class="detail__message">
+            <%= @recipe.description %>
+          </p>
+        </div>
+        <div class="recipe__detail">
+          <p class="detail__title">食材</p>
+          <p class="detail__message">
+            <%= @recipe.foodstuff %>
+          </p>
+        </div>
+      </div>
+  </div>
+</main>
