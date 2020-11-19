@@ -1,3 +1,4 @@
+
 <div class='title-contents'>
   <h1 class="service-title">
   本日の献立は？
@@ -15,3 +16,7 @@
     <% end %>
   </div>
 </div>
+<%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
+  <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+  <%= f.submit "検索", class: "search-btn" %>
+<% end %>

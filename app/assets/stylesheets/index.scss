@@ -1,5 +1,21 @@
-.title-contents {
+.search-form {
   padding-top: 80px;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.search-input {
+  width: 30%;
+  margin-right: 10px;
+}
+
+ .search-btn {
+  width: 10%;
+  background-color: rgb(120, 120, 252);
+  color: #fff;
+}
+
+.title-contents {
   width: 1000px;
   height: 600px;
   background-image: image-url('kondate.jpeg');
