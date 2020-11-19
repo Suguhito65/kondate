@@ -1,0 +1,20 @@
+<%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
+  <%= f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= f.submit "検索", class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @recipes.each do |recipe| %>
+    <%= link_to recipe_path(recipe.id) do %>
+      <main class="recipe-show">
+        <div class="recipe-box">
+          <p class="cuisine">
+            <%= recipe.cuisine %>
+          </p>
+        </div>
+        <div class='recipe-img-content'>
+          <%= image_tag recipe.image, class: "recipe-box-img" %>
+        </div>
+      </main>
+    <% end %>
+  <% end %>
+</div>
