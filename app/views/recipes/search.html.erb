@@ -1,16 +1,9 @@
-<div class="contents row">
-  <% @recipes.each do |recipe| %>
-    <%= link_to recipe_path(recipe.id) do %>
-      <main class="recipe-show">
-        <div class="recipe-box">
-          <p class="cuisine">
-            <%= recipe.cuisine %>
-          </p>
-        </div>
-        <div class='recipe-img-content'>
-          <%= image_tag recipe.image, class: "recipe-box-img" %>
-        </div>
-      </main>
-    <% end %>
-  <% end %>
-</div>
+<main class="main">
+  <div class="inner">
+    <div class='card-wrapper'>
+      <% @recipes.each do |recipe| %>
+        <%= render partial: "recipe", locals: {recipe: recipe} %>
+      <% end %>
+    </div>
+  </div>
+</main>
