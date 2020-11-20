@@ -4,6 +4,12 @@
   本日の献立は？
   </h1>
 </div>
+
+<%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
+  <%= f.text_field :keyword, placeholder: "食材を検索する", class: "search-input" %>
+  <%= f.submit "検索", class: "search-btn" %>
+<% end %>
+
 <div class='recipe-content'>
   <h2 class="recipe-title">レシピ一覧</h2>
   <div class='recipe-img-content'>
@@ -16,7 +22,3 @@
     <% end %>
   </div>
 </div>
-<%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
-  <%= f.text_field :keyword, placeholder: "検索する", class: "search-input" %>
-  <%= f.submit "検索", class: "search-btn" %>
-<% end %>
