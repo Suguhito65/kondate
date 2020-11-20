@@ -11,24 +11,27 @@
 
  .search-btn {
   width: 10%;
-  background-color: rgb(120, 120, 252);
+  background-color: #2e2e2e;
   color: #fff;
 }
 
 .title-contents {
-  width: 1000px;
-  height: 600px;
+  width: 100vw;
   background-image: image-url('kondate.jpeg');
   background-size: cover;
-  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: top center;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  padding: 80px 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .service-title {
-  color: #fff;
-  font-size: 50px;
+  font-size: 8vh;
 }
 
 .recipe-content {
@@ -36,7 +39,7 @@
 }
 
 .recipe-title {
-  color: rgb(9, 204, 201);
+  color: #2e2e2e;
   font-size: 30px;
   text-align: center;
   margin-bottom: 20px;
@@ -65,4 +68,5 @@
   font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
+  color: #2e2e2e;
 }
