@@ -1,17 +1,23 @@
-<div class='title-contents'>
-  <h1 class="service-title">
-  本日の献立は？
-  </h1>
-</div>
-<div class='recipe-content'>
-  <h2 class="recipe-title">レシピ一覧</h2>
-  <div class='recipe-img-content'>
-    <% @recipes.each do |recipe| %>
-      <%= link_to recipe_path(recipe.id) do %>
-        <%= image_tag recipe.image, class: "recipe-img" %>
-        <%= recipe.cuisine %>
-        <%= recipe.user.name %>
-      <% end %>
+<main class="main">
+  <div class="inner">
+    <div class='title-contents'>
+      <h1 class="service-title">
+      本日の献立は？
+      </h1>
+    </div>
+
+    <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.text_field :keyword, placeholder: "食材で検索する", class: "search-input" %>
+      <%= f.submit "検索", class: "search-btn" %>
     <% end %>
+
+    <div class='recipe-content'>
+      <h2 class="recipe-title">レシピ一覧</h2>
+      <div class='card-wrapper'>
+        <% @recipes.each do |recipe| %>
+          <%= render partial: "recipe", locals: {recipe: recipe} %>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
+</main>

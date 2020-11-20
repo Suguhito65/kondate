@@ -22,7 +22,7 @@ a {
 
 /* ヘッダー */
 .header {
-  background:  #fbffda;
+  background:  #2e2e2e;
   height: 80px;
   width: 100%;
   padding: 20px 0;
@@ -45,23 +45,23 @@ a {
   font-family: serif;
   font-size: 30px;
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 .nav_btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #f1b307;
+  color: #fff;
   text-decoration: none;
   user-select: none;
-  border: 1px #f1b307 solid;
+  border: 1px #fff solid;
   border-radius: 13px;
   transition: 0.4s ease;
 }
 .nav_btn:hover{
-  color: #fff;
-  background: #f1b307;
+  color: #2e2e2e;
+  background: #fff;
 }
 
 /* フォーム周り */
@@ -79,13 +79,13 @@ a {
 
 .error-message {
   font-size: 1.3vw;
-  color: rgb(19, 9, 204);
+  color: #2e2e2e;
 }
 
 .login-flash-message {
   font-size: 1.3vw;
   list-style: disc;
-  color: rgb(19, 9, 204);
+  color: #2e2e2e;
 }
 
 
@@ -99,11 +99,17 @@ a {
   .logo {
     font-size: 20px;
   }
+
+  .card {
+    width: 48%;
+    margin-bottom: 40px;
+  }
 }
 
 /* スマホ表示 */
 @media (max-width: 599px) {
-  .logo {
-    font-size: 15px;
+  .card {
+    width: 100%;
+    margin-bottom: 60px;
   }
 }

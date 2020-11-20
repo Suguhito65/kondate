@@ -7,4 +7,12 @@ class Recipe < ApplicationRecord
     validates :cuisine
     validates :foodstuff
   end
+
+  def self.search(search)
+    if search != ""
+      Recipe.where('foodstuff LIKE(?)', "%#{search}%")
+    else
+      Recipe.all
+    end
+  end
 end
