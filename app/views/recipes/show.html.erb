@@ -8,9 +8,11 @@
     </div>
 
     <% if user_signed_in? %>
-      <%= link_to 'レシピの編集', edit_recipe_path, class: "edit-btn" %>
-      <p class='or-text'>or</p>
-      <%= link_to '削除', recipe_path, method: :delete, class:'recipe-destroy' %>
+      <% if current_user.id == @recipe.user_id %>
+        <%= link_to 'レシピの編集', edit_recipe_path, class: "edit-btn" %>
+        <p class='or-text'>or</p>
+        <%= link_to '削除', recipe_path, method: :delete, class:'recipe-destroy' %>
+      <% end %>
     <% end %>
 
     <div class="recipe__body">
