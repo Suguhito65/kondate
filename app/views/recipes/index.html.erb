@@ -5,14 +5,15 @@
       本日の献立は？
       </h1>
     </div>
-
+    
+    <h2 class="section-title">おすすめレシピ</h2>
     <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
-      <%= f.text_field :keyword, placeholder: "食材で検索する", class: "search-input" %>
-      <%= f.submit "検索", class: "search-btn" %>
+      <%= f.text_field :keyword, placeholder: "食材を入力して下さい", class: "input-default" %>
+      <%= f.submit "検索", class: "form__btn" %>
     <% end %>
 
     <div class='recipe-content'>
-      <h2 class="recipe-title">レシピ一覧</h2>
+      <h2 class="section-title">レシピ一覧</h2>
       <div class='card-wrapper'>
         <% @recipes.each do |recipe| %>
           <%= render partial: "recipe", locals: {recipe: recipe} %>

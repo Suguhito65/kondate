@@ -1,8 +1,10 @@
 <div class="main">
   <div class="inner">
-    <div class="form__wrapper">
+    <div class="form_wrapper">
       <h2 class="page-heading">レシピ編集</h2>
-      <%= render partial: "form", locals: {recipe: @recipe} %>
+      <div class="form_wrap">
+        <%= render partial: "form", locals: {recipe: @recipe} %>
+      </div>
     </div>
   </div>
 </div>
