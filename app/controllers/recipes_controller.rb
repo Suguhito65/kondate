@@ -38,7 +38,7 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.search(params[:keyword])
+    @recipes = Recipe.search(params[:keyword]).order("RAND()").limit(1)
   end
 
   private

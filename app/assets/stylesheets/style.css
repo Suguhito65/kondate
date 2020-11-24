@@ -64,10 +64,87 @@ a {
   background: #fff;
 }
 
+/* フッター */
+.footer {
+  background:  #2e2e2e;
+  height: 80px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.footer-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__logo {
+  font-family: serif;
+  font-size: 35px;
+  text-decoration: none;
+  color: #fff;
+}
+
 /* フォーム周り */
-.form__wrapper{
+.form__wrapper {
   min-height: calc(100vh - 161px);
   padding-top: 80px;
+}
+
+.form_wrapper {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.form_wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.form__text {
+  width: 50%;
+}
+
+.field{
+  margin: 10px 0;
+}
+
+.actions{
+  margin-bottom: 40px;
+}
+
+.input-default {
+  width: 300px;
+  height: 45px;
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px 0 10px 0;
+}
+
+.form__btn{
+  display: inline-block;
+  margin-top: 50px;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #2e2e2e;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 #2e2e2e, 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form__btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.page-heading {
+  margin-top: 50px;
+  font-size: 30px;
+  text-align: center;
 }
 
 /* エラー */
@@ -96,10 +173,6 @@ a {
     margin: 0 auto;
   }
 
-  .logo {
-    font-size: 20px;
-  }
-
   .card {
     width: 48%;
     margin-bottom: 40px;
@@ -108,6 +181,10 @@ a {
 
 /* スマホ表示 */
 @media (max-width: 599px) {
+  .logo {
+    font-size: 25px;
+  }
+
   .card {
     width: 100%;
     margin-bottom: 60px;
