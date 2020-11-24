@@ -122,6 +122,12 @@ a {
   margin: 5px 0 10px 0;
 }
 
+#preview {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
 .form__btn{
   display: inline-block;
   margin-top: 50px;
