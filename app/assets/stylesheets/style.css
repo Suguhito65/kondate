@@ -64,6 +64,27 @@ a {
   background: #fff;
 }
 
+/* フッター */
+.footer {
+  background:  #2e2e2e;
+  height: 80px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.footer-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__logo {
+  font-family: serif;
+  font-size: 35px;
+  text-decoration: none;
+  color: #fff;
+}
+
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
