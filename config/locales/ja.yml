@@ -1,0 +1,9 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 名前
+     recipe:
+       image: 画像
+       cuisine: 料理名
+       foodstuff: 食材
