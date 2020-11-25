@@ -2,6 +2,10 @@
   <div class="inner">
     <div class='title-contents'>
       <h1 class="service-title">
+      <% if user_signed_in? %>
+        <%= link_to current_user.name, user_path(current_user.id), class: :greeting__link %>
+        さん<br>
+      <% end %>
       本日の献立は？
       </h1>
     </div>

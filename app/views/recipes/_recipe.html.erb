@@ -2,6 +2,6 @@
   <%= link_to image_tag(recipe.image, class: :card__img), recipe_path(recipe.id) %>
   <div class="card-body">
     <%= link_to recipe.cuisine, recipe_path(recipe.id), class: :card__cuisine %>
-    <%= link_to "by #{recipe.user.name}", "/users/#{recipe.user_id}", class: :card__user %>
+    <%= link_to "by #{recipe.user.name}", user_path(recipe.user_id), class: :card__user %>
   </div>
 </div>
