@@ -28,6 +28,12 @@
           <%= @recipe.foodstuff %>
         </p>
       </div>
+      <div class="recipe__detail">
+        <p class="detail__title">料理人</p>
+        <p class="detail__message">
+          <%= link_to @recipe.user.name, user_path(@recipe.user_id), class: :recipe__user %>
+        </p>
+      </div>
     </div>
   </div>
 </main>
