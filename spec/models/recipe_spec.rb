@@ -15,22 +15,22 @@ RSpec.describe Recipe, type: :model do
       it "ユーザーが紐づいていないと保存できない" do
         @recipe.user = nil
         @recipe.valid?
-        expect(@recipe.errors.full_messages).to include("User must exist")
+        expect(@recipe.errors.full_messages).to include("Userを入力してください")
       end
       it "画像がないと保存できない" do
         @recipe.image = nil
         @recipe.valid?
-        expect(@recipe.errors.full_messages).to include("Image can't be blank")
+        expect(@recipe.errors.full_messages).to include("画像を入力してください")
       end
       it "料理名がないと保存できない" do
         @recipe.cuisine = ""
         @recipe.valid?
-        expect(@recipe.errors.full_messages).to include("Cuisine can't be blank")
+        expect(@recipe.errors.full_messages).to include("料理名を入力してください")
       end
       it "食材がないと保存できない" do
         @recipe.foodstuff = ""
         @recipe.valid?
-        expect(@recipe.errors.full_messages).to include("Foodstuff can't be blank")
+        expect(@recipe.errors.full_messages).to include("食材を入力してください")
       end
     end
   end
