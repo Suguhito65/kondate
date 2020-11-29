@@ -1,5 +1,4 @@
-<main class="main">
-  <div class="inner">
+
     <div class='title-contents'>
       <h1 class="service-title">
       <% if user_signed_in? %>
@@ -9,7 +8,8 @@
       本日の献立は？
       </h1>
     </div>
-    
+<main class="main">
+  <div class="inner">
     <h2 class="section-title">献立ガチャ</h2>
     <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
       <%= f.text_field :keyword, placeholder: "食材を１つ入力して下さい", class: "input-default" %>
