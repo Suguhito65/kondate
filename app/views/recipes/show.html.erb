@@ -47,9 +47,11 @@
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
-        <% @comments.each do |comment| %>
+        <% @recipe.comments.each do |comment| %>
           <p>
             <%= comment.text %>
+            <%= link_to '削除', "/recipes/#{@recipe.id}/comments/#{comment.id}", method: :delete %>
+            <%= link_to "by#{comment.user.name}", user_path(comment.user_id) %>
           </p>
         <% end %>
       <% end %>
