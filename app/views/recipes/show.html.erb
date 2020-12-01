@@ -35,5 +35,24 @@
         </p>
       </div>
     </div>
+    <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@recipe , @comment], local: true) do |f| %>
+        <%= f.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= f.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </main>
