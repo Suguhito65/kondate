@@ -36,7 +36,6 @@
 
 # 実装予定の機能
 
-- コメント機能
 - いいね機能
 
 # テーブル設計
@@ -52,6 +51,7 @@
 ### Association
 
 - has_many :recipes
+- has_many :comments
 
 ## recipes テーブル
 
@@ -65,3 +65,18 @@
 ### Association
 
 - belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column    | Type    | Options     |
+| --------- | ------- | ----------- |
+| text      | text    | null: false |
+| user_id   | integer | null: false |
+| recipe_id | integer | null: false |
+
+### Association
+
+- belongs_to :user
+- belongs_to :recipes
+
