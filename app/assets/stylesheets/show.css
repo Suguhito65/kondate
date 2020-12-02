@@ -8,7 +8,7 @@
 }
 
 .recipe-box {
-  background-color: #FFF;
+  background-color: #fff;
   width: 70vw;
   min-width: 1200px;
   padding: 10vh 15vw;
@@ -69,7 +69,7 @@
 }
 
 .recipe__user {
-  color: #2e2e2e;
+  color: black;
   text-decoration: underline;
 }
 
@@ -82,6 +82,24 @@
 }
 
 .search__cuisine {
-  color: #2e2e2e;
+  color: black;
   font-size: 30px;
+}
+
+.comment__list {
+  list-style: disc;
+}
+
+.comment__destroy {
+  /* display: block; */
+  font-size: 15px;
+  color: black;
+  text-align: center;
+}
+
+.comment__user {
+  /* display: block; */
+  font-size: 15px;
+  color: black;
+  text-align: right;
 }

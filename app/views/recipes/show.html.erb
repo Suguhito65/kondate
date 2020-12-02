@@ -9,9 +9,9 @@
 
     <% if user_signed_in? %>
       <% if current_user.id == @recipe.user_id %>
-        <%= link_to 'レシピの編集', edit_recipe_path, class: "edit-btn" %>
+        <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "edit-btn" %>
         <p class='or-text'>or</p>
-        <%= link_to 'レシピの削除', recipe_path, method: :delete, class:'recipe-destroy' %>
+        <%= link_to 'レシピの削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
       <% end %>
     <% end %>
 
@@ -35,26 +35,31 @@
         </p>
       </div>
     </div>
-    <div class="container">
+    <div class="recipe__comments">
     <% if current_user %>
       <%= form_with(model: [@recipe , @comment], local: true) do |f| %>
-        <%= f.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= f.submit "SEND" %>
+        <div class="field">
+          <%= f.label :text, "コメント", class: :detail__title %><br>
+          <%= f.text_field :text, placeholder:"不適切な文言は控えて下さい", class: "input-default" %>
+          <%= f.submit "送信", class: :form__btn  %>
+        </div>
       <% end %>
     <% end %>
     <div class="comments">
       <p class="detail__title">コメント一覧</p>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <%= comment.text %>
-            <% if user_signed_in? && current_user.id == comment.user_id %>
-              <%= link_to '削除', "/recipes/#{@recipe.id}/comments/#{comment.id}", method: :delete, class: :comment__destroy %>
-            <% end %>
-            <%= link_to "by#{comment.user.name}", user_path(comment.user_id), class: :comment__user %>
-          </p>
+      <ul>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <li class="comment__list">
+              <%= comment.text %>
+              <% if user_signed_in? && current_user.id == comment.user_id %>
+                <%= link_to '削除', "/recipes/#{@recipe.id}/comments/#{comment.id}", method: :delete, class: :comment__destroy %>
+              <% end %>
+              <%= link_to "by#{comment.user.name}", user_path(comment.user_id), class: :comment__user %>
+            </li>
+          <% end %>
         <% end %>
-      <% end %>
+      </ul>
     </div>
   </div>
 </main>
