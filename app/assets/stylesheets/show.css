@@ -56,16 +56,25 @@
 }
 
 
-.recipe__detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
+.detail-table {
+  margin: 30px 0;
+  width: 80vw;
 }
 
-.detail__title{
-  font-size: 20px;
-  font-weight: bold;
+.detail-recipe {
+  width: 20%;
+  color: #fff;
+  background-color: #2e2e2e;
+  border: 1px solid #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #2e2e2e;
+  font-size: 14px;
 }
 
 .recipe__user {
@@ -86,20 +95,44 @@
   font-size: 30px;
 }
 
-.comment__list {
-  list-style: disc;
+.container {
+  padding: 20px 50px; 
+  background-color: #2e2e2e;
+  border-radius: 2%;
 }
 
-.comment__destroy {
-  /* display: block; */
-  font-size: 15px;
-  color: black;
-  text-align: center;
+.detail__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  color: #fff;
+}
+
+.comment__btn {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #2e2e2e;
+  text-decoration: none;
+  user-select: none;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 #dedede, 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.comment__list {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
 }
 
 .comment__user {
-  /* display: block; */
   font-size: 15px;
-  color: black;
-  text-align: right;
+  color: #fff;
+}
+
+.comment__destroy {
+  font-size: 10px;
+  color: #fff;
 }
