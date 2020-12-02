@@ -3,10 +3,12 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :move_to_index, only: [:edit, :destroy]
   def index
-    @recipes = Recipe.includes(:user)
+    @recipes = Recipe.includes(:user).order("created_at DESC")
   end
 
   def show
+    @comment = Comment.new
+    @comments = @recipe.comments.includes(:user)
   end
 
   def new

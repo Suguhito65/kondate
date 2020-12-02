@@ -9,30 +9,58 @@
 
     <% if user_signed_in? %>
       <% if current_user.id == @recipe.user_id %>
-        <%= link_to 'レシピの編集', edit_recipe_path, class: "edit-btn" %>
+        <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "edit-btn" %>
         <p class='or-text'>or</p>
-        <%= link_to '削除', recipe_path, method: :delete, class:'recipe-destroy' %>
+        <%= link_to 'レシピの削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
       <% end %>
     <% end %>
 
-    <div class="recipe__body">
-      <div class="recipe__detail">
-        <p class="detail__title">レシピ説明</p>
-        <p class="detail__message">
+    <table class="detail-table">
+      <tr>
+        <th class="detail-recipe">レシピ説明</th>
+        <td class="detail-value">
           <%= @recipe.description %>
-        </p>
-      </div>
-      <div class="recipe__detail">
-        <p class="detail__title">食材</p>
-        <p class="detail__message">
+        </td>
+      </tr>
+      <tr>
+        <th class="detail-recipe">食材</th>
+        <td class="detail-value">
           <%= @recipe.foodstuff %>
-        </p>
-      </div>
-      <div class="recipe__detail">
-        <p class="detail__title">料理人</p>
-        <p class="detail__message">
+        </td>
+      </tr>
+      <tr>
+        <th class="detail-recipe">料理人</th>
+        <td class="detail-value">
           <%= link_to @recipe.user.name, user_path(@recipe.user_id), class: :recipe__user %>
-        </p>
+        </td>
+      </tr>
+    </table>
+    <div class="container">
+      <div class="recipe__comments">
+      <% if current_user %>
+        <%= form_with(model: [@recipe , @comment], local: true) do |f| %>
+          <div class="field">
+            <%= f.label :text, "コメント", class: :detail__title %><br>
+            <%= f.text_field :text, placeholder:"不適切な文言は控えて下さい", class: "input-default" %>
+            <%= f.submit "送信", class: :comment__btn  %>
+          </div>
+        <% end %>
+      <% end %>
+      <div class="comments">
+        <p class="detail__title">コメント一覧</p>
+        <ul class="comment__container">
+          <% if @comments %>
+            <% @comments.each do |comment| %>
+              <li class="comment__list">
+                <%= comment.text %>
+                <% if user_signed_in? && current_user.id == comment.user_id %>
+                  <%= link_to '削除', "/recipes/#{@recipe.id}/comments/#{comment.id}", method: :delete, class: :comment__destroy %>
+                <% end %>
+                <%= link_to "by#{comment.user.name}", user_path(comment.user_id), class: :comment__user %>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
