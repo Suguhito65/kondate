@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.cuisine{
+.cuisine {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
@@ -130,6 +130,7 @@
 .comment__user {
   font-size: 15px;
   color: #fff;
+  margin-left: 10px;
 }
 
 .comment__destroy {

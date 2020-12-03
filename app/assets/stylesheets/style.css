@@ -48,7 +48,7 @@ a {
   color: #fff;
 }
 
-.nav_btn{
+.nav_btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -60,7 +60,7 @@ a {
   transition: 0.4s ease;
   margin-left: 5px;
 }
-.nav_btn:hover{
+.nav_btn:hover {
   color: #2e2e2e;
   background: #fff;
 }
@@ -107,12 +107,12 @@ a {
   width: 50%;
 }
 
-.field{
+.field {
   margin: 10px 0;
   font-size: 20px;
 }
 
-.actions{
+.actions {
   margin-bottom: 40px;
 }
 
@@ -130,7 +130,7 @@ a {
   object-fit: contain;
 }
 
-.form__btn{
+.form__btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;

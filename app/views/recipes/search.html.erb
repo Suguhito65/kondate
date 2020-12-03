@@ -2,12 +2,10 @@
   <div class="recipe-box">
     <div class='recipe-img-content'>
       <% @recipes.each do |recipe| %>
-        <div class="card">
-          <%= link_to image_tag(recipe.image, class: :search__img), recipe_path(recipe.id) %>
-          <div class="card-body">
-            <%= link_to recipe.cuisine, recipe_path(recipe.id), class: :search__cuisine %>
-          </div>
-        </div>
+        <p class="cuisine">
+          <%= recipe.cuisine %>
+        </p>
+        <%= link_to image_tag(recipe.image, class: :search__img), recipe_path(recipe.id) %>
       <% end %>
     </div>
   </div>
