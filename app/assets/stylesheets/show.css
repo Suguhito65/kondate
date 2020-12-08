@@ -28,6 +28,11 @@
   color: black;
 }
 
+.btn_arrow {
+  font-size: 20px;
+  color: black;
+}
+
 .cuisine {
   text-align: center;
   font-weight: bold;
