@@ -171,13 +171,13 @@ a {
 
 .error-message {
   font-size: 1.3vw;
-  color: #2e2e2e;
+  color: red;
 }
 
 .login-flash-message {
   font-size: 1.3vw;
   list-style: disc;
-  color: #2e2e2e;
+  color: red;
 }
 
 
