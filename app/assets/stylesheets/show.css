@@ -17,6 +17,22 @@
   align-items: center;
 }
 
+.arrow {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.btn_arrow {
+  font-size: 20px;
+  color: black;
+}
+
+.btn_arrow {
+  font-size: 20px;
+  color: black;
+}
+
 .cuisine {
   text-align: center;
   font-weight: bold;
@@ -40,6 +56,7 @@
   margin: 20px 0px;
   padding: 2vh 10vw;
   border: 1px solid #2e2e2e;
+  border-radius: 10px;
 }
 
 .or-text {
@@ -53,6 +70,7 @@
   color: #fff;
   margin: 20px 0px;
   padding: 2vh 10vw;
+  border-radius: 10px;
 }
 
 
@@ -98,7 +116,7 @@
 .container {
   padding: 20px 50px; 
   background-color: #2e2e2e;
-  border-radius: 2%;
+  border-radius: 10px;
 }
 
 .detail__title {

@@ -141,6 +141,7 @@ a {
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 #2e2e2e, 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
+  margin-bottom: 40px;
 }
 
 .form__btn:hover {
@@ -171,13 +172,13 @@ a {
 
 .error-message {
   font-size: 1.3vw;
-  color: #2e2e2e;
+  color: red;
 }
 
 .login-flash-message {
   font-size: 1.3vw;
   list-style: disc;
-  color: #2e2e2e;
+  color: red;
 }
 
 
