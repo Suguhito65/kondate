@@ -1,5 +1,13 @@
 <main class="recipe-show">
   <div class="recipe-box">
+    <div class="arrow">
+      <% if @recipe.previous.present? %>
+        <%= link_to "< 前へ", recipe_path(@recipe.previous), class: "btn_arrow" %>
+      <% end %>
+      <% if @recipe.next.present? %>
+        <%= link_to "次へ >", recipe_path(@recipe.next), class: "btn_arrow" %>
+      <% end %>
+    </div>
     <p class="cuisine">
       <%= @recipe.cuisine %>
     </p>

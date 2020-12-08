@@ -17,6 +17,17 @@
   align-items: center;
 }
 
+.arrow {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.btn_arrow {
+  font-size: 20px;
+  color: black;
+}
+
 .cuisine {
   text-align: center;
   font-weight: bold;
