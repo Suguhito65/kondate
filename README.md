@@ -24,7 +24,7 @@
 
 # 開発環境
 
-- Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/AWS
+- Ruby/Ruby on Rails/JavaScript/MySQL/Github/Visual Studio Code/AWS
 
 # 利用方法
 
@@ -37,9 +37,29 @@
 
 - 私の妻をはじめ世の中の主婦（主夫）の方々は、献立を考える事が億劫になる日もあるかと思います。勝手に献立を決めてくれるアプリがあると便利だなと思い作りました。その際、冷蔵庫に残った食材を使うことになる事が多いと考え、献立ガチャの検索窓にレシピ名ではなく食材を入れて検索するように設定してみました。
 
+# 実装した機能についてのGIFと説明
+
+## レシピ投稿の様子です。プレビューがあることでどの画像を投稿しようとしているかがわかります。
+
+- https://i.gyazo.com/3474c1a8f96209e1a4fbb56beda310fc.gif
+
+## レシピ編集の様子です。レシピ詳細ページ同士で遷移する事もできます。
+
+- https://i.gyazo.com/cad4ac5516e2d1a9e8010f786ea2e163.gif
+
+## 検索ガチャ機能の様子です。検索窓に卵と入力すると卵が食材として使われているレシピがランダムで一つ表示されます。
+
+- https://i.gyazo.com/f9fe514389e76ab2ba928b4a0bf86241.gif
+
+- https://i.gyazo.com/0ffe5f6712ce8dbaf4ba9ad248c4f619.gif
+
 # 実装予定の機能
 
 - いいね機能
+
+# データベース設計
+
+- https://i.gyazo.com/2e72cdea818de00dd8cfd82c883705b6.png
 
 # テーブル設計
 
