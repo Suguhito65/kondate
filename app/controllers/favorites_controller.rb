@@ -8,6 +8,6 @@ class FavoritesController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id])
     @favorite = current_user.favorites.find_by(recipe_id: @recipe.id)
     @favorite.destroy
-    recirect_back(fallback_location: root_path)
+    redirect_back(fallback_location: root_path)
   end
 end

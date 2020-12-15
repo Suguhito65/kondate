@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "recipes#index"
   resources :users, only: :show
   resources :recipes, except: :index do
-    resources :favoretes, only: [:create, :destroy]
+    resources :favorites, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
     collection do
       get 'search'
