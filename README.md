@@ -53,10 +53,6 @@
 
 - https://i.gyazo.com/0ffe5f6712ce8dbaf4ba9ad248c4f619.gif
 
-# 実装予定の機能
-
-- いいね機能
-
 # データベース設計
 
 - https://i.gyazo.com/2e72cdea818de00dd8cfd82c883705b6.png
@@ -74,6 +70,7 @@
 ### Association
 
 - has_many :recipes
+- has_many :favorites, dependent: :destroy
 - has_many :comments
 
 ## recipes テーブル
@@ -88,7 +85,20 @@
 ### Association
 
 - belongs_to :user
-- has_many :comments
+- has_many :favorites, dependent: :destroy
+- has_many :comments, dependent: :destroy
+
+## favorites テーブル
+
+| Column    | Type    | Options     |
+| --------- | ------- | ----------- |
+| user_id   | integer | null: false |
+| recipe_id | integer | null: false |
+
+### Association
+
+- belongs_to :user
+- belongs_to :recipe
 
 ## comments テーブル
 
