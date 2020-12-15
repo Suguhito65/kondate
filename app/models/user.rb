@@ -11,6 +11,6 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   def already_favorited?(recipe)
-    self.favorites.exists?(recipe_id: recipe.id)
+    favorites.where(recipe_id: recipe.id).exists?
   end
 end
