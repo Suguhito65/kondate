@@ -2,20 +2,24 @@
   <%= link_to image_tag(recipe.image, class: :card__img), recipe_path(recipe.id) %>
   <div class="card-body">
     <%= link_to recipe.cuisine, recipe_path(recipe.id), class: :card__cuisine %>
-    <%= link_to "by #{recipe.user.name}", user_path(recipe.user_id), class: :card__user %>
-
-    <% if user_signed_in? %>
-      <% if current_user.already_favorited?(recipe) %>
-        <%= link_to recipe_favorite_path(recipe, recipe.id), method: :delete do %>
-          <%= image_tag "iine2.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <% end %>
-      <% else %>
-        <%= link_to recipe_favorites_path(recipe, recipe.id), method: :post do %>
-          <%= image_tag "iine.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <% end %>
+    <div class="card-manage">
+      <% if user_signed_in? %>
+        <div class="card_favorite">
+          <% if current_user.already_favorited?(recipe) %>
+            <%= link_to recipe_favorite_path(recipe, recipe.id), method: :delete do %>
+              <%= image_tag "iine2.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+            <% end %>
+          <% else %>
+            <%= link_to recipe_favorites_path(recipe, recipe.id), method: :post do %>
+              <%= image_tag "iine.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+            <% end %>
+          <% end %>
+        </div>
+        <%= recipe.favorites.count %>
       <% end %>
-      <%= recipe.favorites.count %>
-    <% end %>
+    </div>
+
+    <%= link_to "by #{recipe.user.name}", user_path(recipe.user_id), class: :card__user %>
 
   </div>
 </div>
