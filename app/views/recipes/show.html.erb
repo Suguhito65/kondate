@@ -11,18 +11,17 @@
     <p class="cuisine">
       <%= @recipe.cuisine %>
     </p>
+
+    <% if user_signed_in? && current_user.id == @recipe.user_id %>
+      <div class="btn_manage">
+        <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "edit-btn" %>
+        <%= link_to 'レシピの削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
+      </div>
+    <% end %>
+
     <div class='recipe-img-content'>
       <%= image_tag @recipe.image, class: "recipe-box-img" %>
     </div>
-
-    <% if user_signed_in? %>
-      <% if current_user.id == @recipe.user_id %>
-        <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "edit-btn" %>
-        <p class='or-text'>or</p>
-        <%= link_to 'レシピの削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
-      <% end %>
-    <% end %>
-
     <table class="detail-table">
       <tr>
         <th class="detail-recipe">レシピ説明</th>
