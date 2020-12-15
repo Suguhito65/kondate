@@ -47,6 +47,14 @@
   object-fit: contain;
 }
 
+.favorite-btn {
+  color: rgb(249, 75, 0);
+  border: 2px solid  #ffb340;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+
 .btn_manage {
   display: flex;
   justify-content: center;

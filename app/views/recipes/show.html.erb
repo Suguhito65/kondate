@@ -22,6 +22,14 @@
     <div class='recipe-img-content'>
       <%= image_tag @recipe.image, class: "recipe-box-img" %>
     </div>
+
+    
+    <div class="favorite-btn">
+      <%= image_tag "iine.svg" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+      <span>いいね 0</span>
+    </div>
+    
+
     <table class="detail-table">
       <tr>
         <th class="detail-recipe">レシピ説明</th>
