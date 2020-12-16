@@ -11,16 +11,19 @@
     <p class="cuisine">
       <%= @recipe.cuisine %>
     </p>
-
     <% if user_signed_in? && current_user.id == @recipe.user_id %>
       <div class="btn_manage">
         <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "edit-btn" %>
         <%= link_to 'レシピの削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
       </div>
     <% end %>
-
     <div class='recipe-img-content'>
       <%= image_tag @recipe.image, class: "recipe-box-img" %>
+    </div>
+    <div class="show_favorite">
+      <div id="favorite_<%= @recipe.id%>">
+        <%= render 'favorites/favorite', { recipe: @recipe } %>
+      </div>
     </div>
     <table class="detail-table">
       <tr>
@@ -63,7 +66,7 @@
                 <% if user_signed_in? && current_user.id == comment.user_id %>
                   <%= link_to '削除', "/recipes/#{@recipe.id}/comments/#{comment.id}", method: :delete, class: :comment__destroy %>
                 <% end %>
-                <%= link_to "by#{comment.user.name}", user_path(comment.user_id), class: :comment__user %>
+                <%= link_to "by #{comment.user.name}", user_path(comment.user_id), class: :comment__user %>
               </li>
             <% end %>
           <% end %>

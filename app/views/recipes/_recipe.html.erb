@@ -3,5 +3,8 @@
   <div class="card-body">
     <%= link_to recipe.cuisine, recipe_path(recipe.id), class: :card__cuisine %>
     <%= link_to "by #{recipe.user.name}", user_path(recipe.user_id), class: :card__user %>
+    <div id="favorite_<%= recipe.id %>">
+      <%= render 'favorites/favorite', { recipe: recipe } %>
+    </div>
   </div>
 </div>

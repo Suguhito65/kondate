@@ -47,6 +47,10 @@
   object-fit: contain;
 }
 
+.show_favorite {
+  margin-top: 20px;
+}
+
 .btn_manage {
   display: flex;
   justify-content: center;
@@ -55,24 +59,22 @@
 
 .edit-btn {
   display: block;
-  background-color: #fff;
+  background-color: green;
   font-size: 14px;
   font-weight: bold;
-  color: #2e2e2e;
+  color: #fff;
   padding: 6px 20px;
-  border: 1px solid #2e2e2e;
   border-radius: 15px;
   margin-bottom: 20px;
 }
 
 .edit-btn:hover {
-  color: #fff;
-  background: rgb(199, 199, 199);
+  opacity: 0.8;
 }
 
 .recipe-destroy {
   display: block;
-  background-color: #2e2e2e;
+  background-color: red;
   font-size: 14px;
   color: #fff;
   padding: 6px 20px;
@@ -81,9 +83,7 @@
 }
 
 .recipe-destroy:hover {
-  color: #fff;
-  background-color: rgb(199, 199, 199);
-  border: 1px solid #2e2e2e;
+  opacity: 0.8;
 }
 
 .detail-table {
@@ -126,16 +126,16 @@
 }
 
 .container {
-  padding: 20px 50px; 
+  padding: 5px 50px 15px; 
   background-color: #2e2e2e;
-  border-radius: 10px;
+  width: 80vw;
 }
 
 .detail__title {
   font-size: 20px;
   font-weight: bold;
-  margin: 20px;
   color: #fff;
+  margin-bottom: 10px;
 }
 
 .comment__btn {
@@ -150,7 +150,6 @@
   box-shadow: 0 3px 3px 0 #dedede, 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
   cursor: pointer;
-  
 }
 
 .comment__list {
@@ -162,7 +161,6 @@
 .comment__user {
   font-size: 15px;
   color: #fff;
-  margin-left: 10px;
 }
 
 .comment__destroy {
