@@ -47,12 +47,8 @@
   object-fit: contain;
 }
 
-.favorite {
-  color: blue;
+.show_favorite {
   margin-top: 20px;
-  border: 2px solid blue;
-  padding: 5px 15px;
-  border-radius: 20px;
 }
 
 .btn_manage {

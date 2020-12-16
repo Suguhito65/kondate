@@ -1,0 +1,18 @@
+<div class="card-manage">
+  <% if user_signed_in? %>
+    <div class="card_favorite">
+      <% if current_user.already_favorited?(recipe) %>
+        <%= link_to recipe_favorite_path(recipe, recipe.id), method: :delete, remote: true do %>
+          <%= image_tag "iine2.png", width:"20", height:"20"%>
+        <% end %>
+      <% else %>
+        <%= link_to recipe_favorites_path(recipe, recipe.id), method: :post, remote: true do %>
+          <%= image_tag "iine.png", width:"20", height:"20" %>
+        <% end %>
+      <% end %>
+    </div>
+  <% else %>
+    <%= image_tag "iine.png", width:"20", height:"20" %>
+  <% end %>
+  <%= recipe.favorites.count %>
+</div>
