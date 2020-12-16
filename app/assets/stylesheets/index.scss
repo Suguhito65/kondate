@@ -66,9 +66,14 @@
   border-radius: 10%;
 }
 
+.card-body {
+  display: flex;
+  justify-content: space-around;
+}
+
 .card__cuisine {
-  display: block;
   font-size: 20px;
+  margin-top: 5px;
   margin-bottom: 8px;
   font-weight: bold;
   color: black;
@@ -76,6 +81,10 @@
 
 .card-manage {
   display: flex;
+  color: blue;
+  border: 2px solid blue;
+  padding: 5px 15px;
+  border-radius: 20px;
 }
 
 .card_favorite {
@@ -83,8 +92,7 @@
 }
 
 .card__user {
-  display: block;
   font-size: 15px;
   color: black;
-  text-align: right;
+  margin-top: 7px;
 }

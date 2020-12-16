@@ -15,8 +15,12 @@
             <% end %>
           <% end %>
         </div>
-        <%= recipe.favorites.count %>
+      <% else %>
+        <div class="card_favorite">
+          <%= image_tag "iine.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        </div>
       <% end %>
+      <%= recipe.favorites.count %>
     </div>
 
     <%= link_to "by #{recipe.user.name}", user_path(recipe.user_id), class: :card__user %>

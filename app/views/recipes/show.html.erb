@@ -23,8 +23,8 @@
       <%= image_tag @recipe.image, class: "recipe-box-img" %>
     </div>
 
-    <% if user_signed_in? %>
-      <div class="favorite">
+    <div class="favorite">
+      <% if user_signed_in? %>
         <% if current_user.already_favorited?(@recipe) %>
           <%= link_to recipe_favorite_path(@recipe, @recipe.id), method: :delete do %>
             <%= image_tag "iine2.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
@@ -34,9 +34,11 @@
             <%= image_tag "iine.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
           <% end %>
         <% end %>
-        <%= @recipe.favorites.count %>
-      </div>
-    <% end %>
+      <% else %>
+        <%= image_tag "iine.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+      <% end %>
+      <%= @recipe.favorites.count %>
+    </div>
 
     <table class="detail-table">
       <tr>
