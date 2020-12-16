@@ -117,7 +117,7 @@ a {
 }
 
 .input-default {
-  width: 300px;
+  width: 40vw;
   height: 45px;
   font-size: 15px;
   padding: 5px;
@@ -157,10 +157,11 @@ a {
 
 /* ユーザー詳細 */
 .user-heading {
-  padding-top: 80px;
+  padding-top: 100px;
   font-size: 40px;
   text-align: center;
   margin-bottom: 40px;
+  font-weight: bold;
 }
 
 /* エラー */

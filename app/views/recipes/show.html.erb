@@ -81,7 +81,7 @@
                 <% if user_signed_in? && current_user.id == comment.user_id %>
                   <%= link_to '削除', "/recipes/#{@recipe.id}/comments/#{comment.id}", method: :delete, class: :comment__destroy %>
                 <% end %>
-                <%= link_to "by#{comment.user.name}", user_path(comment.user_id), class: :comment__user %>
+                <%= link_to "by #{comment.user.name}", user_path(comment.user_id), class: :comment__user %>
               </li>
             <% end %>
           <% end %>
