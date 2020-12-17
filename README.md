@@ -46,13 +46,17 @@
 
 ## レシピ編集の様子です。レシピ詳細ページ同士で遷移する事もできます。
 
-- https://i.gyazo.com/cad4ac5516e2d1a9e8010f786ea2e163.gif
+- https://i.gyazo.com/feb5431adba5ba03ca33d96fb64f97d3.gif
 
 ## 検索ガチャ機能の様子です。検索窓に卵と入力すると卵が食材として使われているレシピがランダムで一つ表示されます。
 
 - https://i.gyazo.com/f9fe514389e76ab2ba928b4a0bf86241.gif
 
 - https://i.gyazo.com/0ffe5f6712ce8dbaf4ba9ad248c4f619.gif
+
+## いいね機能の様子です。トップページやレシピ詳細ページなどにあり、クリックするとカウントされます。ログインしたユーザーのみがそれぞれのレシピに一票だけ入れることができます。
+
+- https://i.gyazo.com/82c2217ef5712d1258ff6ed02736d66a.gif
 
 # データベース設計
 
