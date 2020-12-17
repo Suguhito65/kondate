@@ -124,6 +124,15 @@ a {
   margin: 5px 0 10px 0;
 }
 
+.input-default-text {
+  width: 40vw;
+  height: 90px;
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px 0 10px 0;
+}
+
+
 #preview {
   height: 100px;
   width: 100px;
