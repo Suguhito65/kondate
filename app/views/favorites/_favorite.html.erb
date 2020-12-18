@@ -12,7 +12,9 @@
       <% end %>
     </div>
   <% else %>
-    <%= image_tag "iine.png", width:"20", height:"20" %>
+    <div class="card_favorite">
+      <%= image_tag "iine.png", width:"20", height:"20" %>
+    </div>
   <% end %>
   <%= recipe.favorites.count %>
 </div>
