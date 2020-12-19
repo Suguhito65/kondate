@@ -13,7 +13,7 @@
     </p>
     <% if user_signed_in? && current_user.id == @recipe.user_id %>
       <div class="btn_manage">
-        <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: "edit-btn" %>
+        <%= link_to 'レシピの編集', edit_recipe_path(@recipe.id), class: 'edit-btn' %>
         <%= link_to 'レシピの削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
       </div>
     <% end %>
