@@ -1,5 +1,6 @@
 <main class="recipe-show">
   <div class="recipe-box">
+    <h1 class="search-title">本日の献立は<br>これで決まり！</h2>
     <div class='recipe-img-content'>
       <% @recipes.each do |recipe| %>
         <p class="cuisine">
@@ -8,5 +9,10 @@
         <%= link_to image_tag(recipe.image, class: :search__img), recipe_path(recipe.id) %>
       <% end %>
     </div>
+    <h1 class="section-title">もう一度ガチャ</h1>
+    <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.text_field :keyword, placeholder: "食材を１つ入力して下さい", class: "input-default" %>
+      <%= f.submit "検索", class: "form__btn" %>
+    <% end %>
   </div>
 </main>
