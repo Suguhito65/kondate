@@ -1,5 +1,5 @@
-<div class="main">
-  <div class="inner">
+<main class="recipe-show">
+  <div class="recipe-box">
     <div class="form_wrapper">
       <h1 class="page-heading">ユーザー新規登録</h1>
       <div class="form_wrap">
@@ -20,7 +20,7 @@
 
           <div class="field">
             <%= f.label :password, "パスワード" %><br />
-            <%= f.password_field :password, placeholder:"6文字以上の半角英語", autocomplete: "new-password", class:"input-default" %>
+            <%= f.password_field :password, placeholder:"6文字以上の半角英数字", autocomplete: "new-password", class:"input-default" %>
           </div>
 
           <div class="field">
@@ -37,4 +37,4 @@
       </div>
     </div>
   </div>
-</div>
+</main>
