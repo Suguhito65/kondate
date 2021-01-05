@@ -24,7 +24,7 @@
 
 # 開発環境
 
-- Ruby/Ruby on Rails/JavaScript/JQuery/MySQL/Github/Visual Studio Code/AWS
+- Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/JQuery/MySQL/Github/Visual Studio Code/AWS
 
 # 利用方法
 
