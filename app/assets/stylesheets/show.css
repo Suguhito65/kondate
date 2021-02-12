@@ -1,11 +1,10 @@
 .recipe-show {
-  background-color: #ebebeb;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5vh 0;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 .recipe-box {
@@ -26,12 +25,15 @@
 
 .btn_arrow {
   font-size: 20px;
-  color: black;
+  color: #000;
+  padding: 4px 20px;
 }
 
-.btn_arrow {
-  font-size: 20px;
-  color: black;
+.btn_arrow:hover {
+  color: #fff;
+  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
+  padding: 4px 20px;
+  border-radius: 15px;
 }
 
 .cuisine {
@@ -44,7 +46,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background-color: #2e2e2e;
+  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
   object-fit: contain;
 }
 
@@ -60,7 +62,7 @@
 
 .edit-btn {
   display: block;
-  background-color: green;
+  background:  linear-gradient(120deg, rgb(2, 250, 56) 0 ,green 100%);
   font-size: 14px;
   font-weight: bold;
   color: #fff;
@@ -75,7 +77,7 @@
 
 .recipe-destroy {
   display: block;
-  background-color: red;
+  background:  linear-gradient(120deg, orange 0 ,red 100%);
   font-size: 14px;
   color: #fff;
   padding: 6px 20px;
@@ -95,9 +97,10 @@
 .detail-recipe {
   width: 20%;
   color: #fff;
-  background-color: #2e2e2e;
+  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
   border: 1px solid #fff;
   font-size: 14px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   text-align: center;
 }
 
@@ -117,7 +120,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background-color: #2e2e2e;
+  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
   object-fit: contain;
 }
 
@@ -128,8 +131,10 @@
 
 .container {
   padding: 5px 50px 15px; 
-  background-color: #2e2e2e;
+  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
   width: 80vw;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+
 }
 
 .detail__title {
@@ -143,7 +148,7 @@
   padding: 7px 15px;
   font-size: 0.8em;
   color: #fff;
-  background: rgb(19, 187, 254);
+  background:  linear-gradient(120deg, skyblue 0 ,blue 100%);
   border-radius: 2px;
   cursor: pointer;
 }
