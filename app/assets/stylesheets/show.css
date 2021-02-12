@@ -131,17 +131,18 @@
 
 .container {
   padding: 5px 50px 15px; 
-  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
   width: 80vw;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px 3px #c9c9c9;
 }
 
 .detail__title {
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
+  color: blue;
+  margin: 10px;
+  border-bottom: 1px solid rgb(181, 181, 181);
+  display: block;
 }
 
 .comment__btn {
@@ -158,7 +159,12 @@
 }
 
 .comment__list {
-  color: #fff;
+  color: #000;
+  list-style: disc;
+}
+
+.comment__text {
+  font-size: 18px;
 }
 
 .comment__option {
@@ -167,13 +173,20 @@
 }
 
 .comment__user {
-  font-size: 12px;
-  color: #fff;
+  font-size: 15px;
+  color: #000;
   margin-left: 15px;
 }
 
 .comment__destroy {
-  font-size: 10px;
+  font-size: 13px;
+  background: red;
   color: #fff;
-  margin-top: 3px;
+  padding: 1px 7px;
+  border-radius: 8px;
+  margin-top: 1px;
+}
+
+.comment__destroy:hover {
+  opacity: 0.5;
 }

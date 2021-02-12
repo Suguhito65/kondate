@@ -61,7 +61,7 @@
         <% if @comments %>
           <% @comments.each do |comment| %>
             <li class="comment__list">
-              <p><%= comment.text %></p>
+              <p class="comment__text"><%= comment.text %></p>
               <div class="comment__option">
                 <% if user_signed_in? && current_user.id == comment.user_id %>
                   <%= link_to '削除', "/recipes/#{@recipe.id}/comments/#{comment.id}", method: :delete, class: :comment__destroy %>
