@@ -31,7 +31,7 @@
 
 .btn_arrow:hover {
   color: #fff;
-  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
+  background:  linear-gradient(120deg, skyblue 0 ,blue 100%);
   padding: 4px 20px;
   border-radius: 15px;
 }
@@ -46,7 +46,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
+  background:  linear-gradient(120deg, skyblue 0 ,blue 100%);
   object-fit: contain;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .edit-btn:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .recipe-destroy {
@@ -86,7 +86,7 @@
 }
 
 .recipe-destroy:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .detail-table {
@@ -97,7 +97,7 @@
 .detail-recipe {
   width: 20%;
   color: #fff;
-  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
+  background:  linear-gradient(120deg, skyblue 0 ,blue 100%);
   border: 1px solid #fff;
   font-size: 14px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
@@ -107,7 +107,7 @@
 .detail-value {
   width: 80%;
   padding: 20px;
-  border: 1px solid #2e2e2e;
+  border: 1px solid rgb(181, 181, 181);
   font-size: 14px;
 }
 
@@ -120,7 +120,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background:  linear-gradient(120deg, rgb(211, 211, 211) 0 ,#2e2e2e 100%);
+  background:  linear-gradient(120deg, skyblue 0 ,blue 100%);
   object-fit: contain;
 }
 
@@ -130,24 +130,22 @@
 }
 
 .container {
-  padding: 5px 50px 15px; 
+  padding: 5px 0 15px; 
   width: 80vw;
   border-radius: 10px;
   box-shadow: 1px 2px 3px 3px #c9c9c9;
 }
 
-.detail__title {
+.detail_title {
+  padding: 10px 50px 10px;
   font-size: 20px;
   font-weight: bold;
-  color: #000;
-  margin: 10px;
-  border-bottom: 1px solid rgb(181, 181, 181);
-  display: block;
 }
 
 .comment__list {
   color: #000;
-  list-style: disc;
+  padding: 10px 50px 10px;
+  border-top: 1px solid rgb(181, 181, 181);
 }
 
 .comment__text {
@@ -176,4 +174,37 @@
 
 .comment__destroy:hover {
   opacity: 0.5;
+}
+
+.comment_section {
+  padding: 5px 5vw 0;
+  border-top: 1px solid rgb(181, 181, 181);
+}
+
+.comment_input {
+  width: 70vw;
+  height: 100px;
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  text-align: center;
+}
+
+.comment_btn {
+  padding: 7px 15px;
+  font-size: 15px;
+  color: #fff;
+  background:  linear-gradient(120deg, skyblue 0 ,blue 100%);
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 #401cdd, 0 1px 2px 0 rgba(64, 0, 255, 0.12);
+  transition: 0.2s ease;
+}
+
+.comment_btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(64, 0, 255, 0.12), 0 1px 8px 0 rgba(64, 0, 2555, 0.12);
+  cursor: pointer;
 }
