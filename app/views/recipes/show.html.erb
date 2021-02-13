@@ -50,9 +50,9 @@
       <% if current_user %>
         <%= form_with(model: [@recipe , @comment], local: true) do |f| %>
           <div class="field">
-            <%= f.label :text, "コメント", class: :detail__title %><br>
+            <%= f.label :text, "コメント投稿", class: :detail__title %><br>
             <%= f.text_field :text, placeholder:"不適切な文言は控えて下さい", class: "input-default" %>
-            <%= f.submit "送信", class: :comment__btn  %>
+            <%= f.submit "投稿", class: :form__btn  %>
           </div>
         <% end %>
       <% end %>

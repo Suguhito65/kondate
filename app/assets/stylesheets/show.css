@@ -139,23 +139,10 @@
 .detail__title {
   font-size: 20px;
   font-weight: bold;
-  color: blue;
+  color: #000;
   margin: 10px;
   border-bottom: 1px solid rgb(181, 181, 181);
   display: block;
-}
-
-.comment__btn {
-  padding: 7px 15px;
-  font-size: 0.8em;
-  color: #fff;
-  background:  linear-gradient(120deg, skyblue 0 ,blue 100%);
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.comment__btn:hover {
-  opacity: 0.8;
 }
 
 .comment__list {
@@ -180,7 +167,7 @@
 
 .comment__destroy {
   font-size: 13px;
-  background: red;
+  background:  linear-gradient(120deg, orange 0 ,red 100%);
   color: #fff;
   padding: 1px 7px;
   border-radius: 8px;
