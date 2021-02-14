@@ -1,14 +1,12 @@
-<div class="main">
-  <div class="inner">
-    <div class="user__wrapper">
-      <h2 class="user-heading">
-        <%= "#{@user.name}さんのレシピ"%>
-      </h2>
-      <div class='card-wrapper'>
-        <% @recipes.each do |recipe| %>
-          <%= render partial: "recipes/recipe", locals: {recipe: recipe} %>
-        <% end %>
-      </div>
+<div class="inner">
+  <div class="user__wrapper">
+    <h2 class="user-heading">
+      <%= "#{@user.name}さんのレシピ"%>
+    </h2>
+    <div class='card-wrapper'>
+      <% @recipes.each do |recipe| %>
+        <%= render partial: "recipes/recipe", locals: {recipe: recipe} %>
+      <% end %>
     </div>
   </div>
 </div>

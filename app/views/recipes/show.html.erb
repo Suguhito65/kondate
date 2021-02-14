@@ -17,9 +17,7 @@
         <%= link_to 'レシピの削除', recipe_path(@recipe.id), method: :delete, class:'recipe-destroy' %>
       </div>
     <% end %>
-    <div class='recipe-img-content'>
-      <%= image_tag @recipe.image, class: "recipe-box-img" %>
-    </div>
+    <%= image_tag @recipe.image, class: "recipe-box-img" %>
     <div class="show_favorite">
       <div id="favorite_<%= @recipe.id%>">
         <%= render 'favorites/favorite', { recipe: @recipe } %>

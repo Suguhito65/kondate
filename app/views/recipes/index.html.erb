@@ -7,21 +7,16 @@
   本日の献立は？
   </h1>
 </div>
-<main class="main">
-  <div class="inner">
-    <h2 class="section-title">献立ガチャ</h2>
-    <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
-      <%= f.text_field :keyword, placeholder: "食材を１つ入力して下さい", class: "input-default" %>
-      <%= f.submit "検索", class: "form__btn" %>
+<div class="inner">
+  <p class="section-title">献立ガチャ</p>
+  <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| %>
+    <%= f.text_field :keyword, placeholder: "食材を１つ入力して下さい", class: "search_input" %>
+    <%= f.submit "検索", class: "search_btn" %>
+  <% end %>
+  <h2 class="section-title">レシピ一覧</h2>
+  <div class='card-wrapper'>
+    <% @recipes.each do |recipe| %>
+      <%= render partial: "recipe", locals: {recipe: recipe} %>
     <% end %>
-
-    <div class='recipe-content'>
-      <h2 class="section-title">レシピ一覧</h2>
-      <div class='card-wrapper'>
-        <% @recipes.each do |recipe| %>
-          <%= render partial: "recipe", locals: {recipe: recipe} %>
-        <% end %>
-      </div>
-    </div>
   </div>
-</main>
+</div>

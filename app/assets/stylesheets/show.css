@@ -37,9 +37,12 @@
 }
 
 .cuisine {
-  text-align: center;
+  color: #000;
   font-weight: bold;
   font-size: 25px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .recipe-box-img {
@@ -62,7 +65,7 @@
 
 .edit-btn {
   display: block;
-  background:  linear-gradient(120deg, rgb(2, 250, 56) 0 ,green 100%);
+  background: linear-gradient(120deg, lime 0 ,green 100%);
   font-size: 14px;
   font-weight: bold;
   color: #fff;
@@ -77,7 +80,7 @@
 
 .recipe-destroy {
   display: block;
-  background:  linear-gradient(120deg, orange 0 ,red 100%);
+  background:  linear-gradient(120deg, pink 0 ,red 100%);
   font-size: 14px;
   color: #fff;
   padding: 6px 20px;
@@ -130,7 +133,7 @@
 }
 
 .container {
-  padding: 5px 0 15px; 
+  padding: 0px 0 15px; 
   width: 80vw;
   border-radius: 10px;
   box-shadow: 1px 2px 3px 3px #c9c9c9;
@@ -140,6 +143,13 @@
   padding: 10px 50px 10px;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
+  background:  linear-gradient(120deg, yellow 0 ,orange 100%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  text-shadow: 0 0 5px orange;
+
 }
 
 .comment__list {
@@ -165,7 +175,7 @@
 
 .comment__destroy {
   font-size: 13px;
-  background:  linear-gradient(120deg, orange 0 ,red 100%);
+  background:  linear-gradient(120deg, pink 0 ,red 100%);
   color: #fff;
   padding: 1px 7px;
   border-radius: 8px;
