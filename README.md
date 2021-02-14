@@ -60,7 +60,7 @@
 
 # データベース設計
 
-![](https://i.gyazo.com/3b776385322efc4f22a063528ec17d78.png)
+![](https://i.gyazo.com/502a05c2c31cf3aa12d1268d8b279cad.png)
 
 # テーブル設計
 
