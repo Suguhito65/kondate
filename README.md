@@ -48,6 +48,8 @@
 
 ![](https://i.gyazo.com/ce9a760ddb0c834f5169c7e0ef85666d.png)
 
+![](https://i.gyazo.com/dc526c087274815d02296fd44e7c0105.jpg)
+
 # データベース設計
 
 ![](https://i.gyazo.com/502a05c2c31cf3aa12d1268d8b279cad.png)
