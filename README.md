@@ -24,7 +24,7 @@
 
 # 開発環境
 
-- Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/JQuery/MySQL 5.6/Github/Visual Studio Code/AWS（EC2, S3）
+- Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/JQuery/MySQL 5.6/Github/Visual Studio Code/AWS(EC2, S3)
 
 # 利用方法
 
@@ -47,6 +47,8 @@
 ![](https://i.gyazo.com/08a6630de6d399628fc5abefad13f5a3.png)
 
 ![](https://i.gyazo.com/ce9a760ddb0c834f5169c7e0ef85666d.png)
+
+![](https://i.gyazo.com/08875c39eb46cf839d0f2da52b51b51b.jpg)
 
 # データベース設計
 
