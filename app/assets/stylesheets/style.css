@@ -141,12 +141,6 @@ a {
   margin: 0px 100px 0px;
 }
 
-#preview {
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
-}
-
 .actions {
   text-align: center;
 }
@@ -181,6 +175,16 @@ a {
   background:  linear-gradient(120deg, yellow 0 ,orange 100%);
   text-align: center;
   text-shadow: 0 0 5px orange;;
+}
+
+#preview {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+#image-list {
+  text-align: center;
 }
 
 /* ユーザー詳細 */
