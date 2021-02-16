@@ -101,7 +101,7 @@ a {
 .form_wrap {
   display: flex;
   justify-content: center;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .form__text {
@@ -110,24 +110,35 @@ a {
 
 .field {
   margin: 10px 0;
-  font-size: 20px;
+  text-align: center;
+}
+
+.input-title {
+  padding-left: 100px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.mandatory {
+  color: red;
+  font-size: 12px;
 }
 
 .input-default {
-  width: 40vw;
+  width: 300px;
   height: 45px;
   font-size: 15px;
   border: 1px solid rgb(181, 181, 181);
-  padding: 5px;
-  margin: 5px 100px 10px;
+  padding: 5px 15px 5px;
+  margin: 0px 100px 0px;
 }
 
 .input-default-text {
-  width: 40vw;
+  width: 300px;
   height: 90px;
   font-size: 15px;
   padding: 5px;
-  margin: 5px 100px 10px;
+  margin: 0px 100px 0px;
 }
 
 #preview {
@@ -136,10 +147,14 @@ a {
   object-fit: contain;
 }
 
+.actions {
+  text-align: center;
+}
+
 .form__btn {
   display: inline-block;
   padding: 7px 15px;
-  margin: 20px 0 50px;
+  margin: 20px 0 40px;
   font-size: 15px;
   color: #fff;
   /* text-decoration: none;
@@ -162,6 +177,7 @@ a {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 20px;
+  margin-bottom: 20px;
   background:  linear-gradient(120deg, yellow 0 ,orange 100%);
   text-align: center;
   text-shadow: 0 0 5px orange;;
@@ -184,8 +200,7 @@ a {
 }
 
 .errors {
-  width: 40vw;
-  border: 1px solid red;
+  width: 300px;
   border-radius: 7px;
   padding: 5px;
   background-color: rgb(255, 225, 229);
@@ -193,12 +208,12 @@ a {
 }
 
 .error-message {
-  font-size: 1.3vw;
+  font-size: 12px;
   color: red;
 }
 
 .login-flash-message {
-  font-size: 1.3vw;
+  font-size: 12px;
   color: red;
   margin-top: 30px;
 }

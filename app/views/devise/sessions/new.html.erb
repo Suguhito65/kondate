@@ -12,14 +12,14 @@
             </div>
           </div>
 
+          <%= f.label :email, "メールアドレス", class:"input-title" %>
           <div class="field">
-            <%= f.label :email, "メールアドレス" %><br />
-            <%= f.email_field :email, placeholder:"PC・携帯どちらでも可", autofocus: true, autocomplete: "email", class:"input-default" %>
+            <%= f.email_field :email, placeholder:"例）kondate@gmail.com", autofocus: true, autocomplete: "email", class:"input-default" %>
           </div>
 
+          <%= f.label :password, "パスワード", class:"input-title" %>
           <div class="field">
-            <%= f.label :password, "パスワード" %><br />
-            <%= f.password_field :password, placeholder: "6文字以上の半角英数字", autocomplete: "current-password", class:"input-default" %>
+            <%= f.password_field :password, placeholder: "※6文字以上の半角英数字", autocomplete: "current-password", class:"input-default" %>
           </div>
 
           <div class="actions">

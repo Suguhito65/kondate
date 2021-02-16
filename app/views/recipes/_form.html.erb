@@ -2,24 +2,24 @@
 
   <%= render 'devise/shared/error_messages', model: f.object %>
 
+  <h2 class="input-title">料理名<span class="mandatory">（必須）</span></h2>
   <div class="field">
-     <%= f.label :cuisine, "料理名" %><br />
      <%= f.text_field :cuisine, class:"input-default" %>
   </div>
 
+  <%= f.label :description, "料理の説明", class:"input-title" %>
   <div class="field">
-    <%= f.label :description, "料理の説明" %><br />
     <%= f.text_area :description, class:"input-default-text" %>
   </div>
 
+  <h2 class="input-title">食材<span class="mandatory">（必須）</span></h2>
   <div class="field">
-    <%= f.label :foodstuff, "食材" %><br />
     <%= f.text_field :foodstuff, class:"input-default" %>
   </div>
 
+  <h2 class="input-title">料理の画像<span class="mandatory">（必須）</span></h2>
   <div class="field">
-    <%= f.label :image, "料理の画像" %><br />
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class:"input-title" %>
   </div>
   <div id="image-list"></div>
   <div class="actions">
