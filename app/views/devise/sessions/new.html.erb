@@ -5,11 +5,9 @@
       <div class="form_wrap">
         <%= form_with model: @user, url:  user_session_path, local: true do |f| %>
 
-          <div class="error-alert">
-            <div class='login-flash-message'>
-              <%= flash[:notice] %>
-              <%= flash[:alert] %>
-            </div>
+          <div class='login-flash-message'>
+            <%= flash[:notice] %>
+            <%= flash[:alert] %>
           </div>
 
           <%= f.label :email, "メールアドレス", class:"input-title" %>
