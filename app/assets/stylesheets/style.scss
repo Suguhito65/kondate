@@ -233,7 +233,7 @@ a {
   }
 
   .card {
-    width: 48%;
+    width: calc((100% - 50px) / 2);
     margin-bottom: 40px;
   }
 }
