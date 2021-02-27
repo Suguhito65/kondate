@@ -24,17 +24,17 @@
   z-index: 0;
 }
 
-.title-contents:before {
-  content: '';
-  background: inherit;
-  filter: blur(3px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  z-index: -1;
-}
+// .title-contents:before {
+//   content: '';
+//   background: inherit;
+//   filter: blur(3px);
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 1px;
+//   z-index: -1;
+// }
 
 .service-title {
   color: #fff;
