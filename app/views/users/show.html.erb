@@ -10,8 +10,3 @@
     </div>
   </div>
 </div>
-<% if user_signed_in? && current_user.id == @user.id %>
-  <div class="withdrawal_manage">
-    <%= link_to '退会', user_path, method: :delete, class: :form__btn %>
-  </div>
-<% end%>
